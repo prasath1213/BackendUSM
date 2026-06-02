@@ -5,12 +5,12 @@ import cors from "cors";
 const app = express();
 
 app.use(cors({
-  origin:["https://form-user-frontend.vercel.app", "http://localhost:5173"]
+  origin: ["https://form-user-frontend.vercel.app", "http://localhost:5173"]
 }));
 app.use(json());
 
 // MongoDB Connection
-connect("mongodb://localhost:27017/userformdb")
+connect("mongodb+srv://sabariprasathsabariprasath96_db_user:vKK2ctbGPsudNTTH@cluster0.awqwymj.mongodb.net/formdb")
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
