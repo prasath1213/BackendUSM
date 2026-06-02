@@ -4,7 +4,9 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:["https://form-user-frontend.vercel.app/", "http://localhost:5173/"]
+}));
 app.use(json());
 
 // MongoDB Connection
